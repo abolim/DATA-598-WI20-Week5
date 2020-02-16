@@ -1,0 +1,52 @@
+---
+title: "my-vignette-file"
+output: 
+  bookdown::html_document2:
+    base_format: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette-file}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: starwarscited.bib
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4
+)
+```
+
+```{r setup}
+library(mysimplecompendium)
+```
+
+## Welcome to Star Wars
+
+```{r, myfig, fig.cap = "Caption: Starwars Logo", cache = TRUE, echo = FALSE}
+knitr::opts_chunk$set(cache.extra = R.version.string,
+                      cache.extra = R.version,
+                      cache.comments =  FALSE)
+knitr::include_graphics("https://lumiere-a.akamaihd.net/v1/images/og-generic_02031d2b.png?region=0%2C0%2C1200%2C1200")
+```
+
+## External R script
+```{r}
+knitr::read_chunk("external_code.R")
+```
+
+```{r makemyplot, echo = TRUE, include = TRUE}
+```
+
+
+## Cross Reference Link
+Go back to the Star Wars Logo in \@ref(fig:myfig)
+
+## References Cited
+
+@lucas1977star - a book on Star Wars.
+
+@brodeur2016star - an article on Star Wars. 
+
