@@ -31,3 +31,7 @@ library(mysimplecompendium)
 
 ## Code of Conduct
 If you want to contribute to this package, please refer the CODE_OF_CONDUCT.md file.
+=======
+# DATA-598-WI20-Week5
+R package creation
+
